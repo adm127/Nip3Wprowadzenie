@@ -1,0 +1,44 @@
+1) Ppodstawowa struktura projektu
+2) Typy zmiennych
+	- int
+	- float
+	- double
+	- byte
+	- char
+	- string
+	- bool
+3) Sterowanie przebiegiem programu
+	- if
+	- switch
+	- for
+	- while
+	- foreach
+4) Kolekcje
+	- Tablica
+	- Lista
+	- Slownik
+	- Ogolnie o kolekcjach?
+5) Klasy
+	- Opisac po co to i z czym to sie je
+	- Konstruktory
+	- property
+	- Przyklad - napisac jakas klase z konstruktorem + prop
+6) Dziedziczenie
+	- opisac po co to i z czym to sie je
+	- operatory public/private/protected
+	- Interfejsy
+	- Dziedziczenie klas
+	- Polimorfizm
+	- Przyklad
+7) Testy
+	- Po co sa testy? I dlaczego sa takie fajne
+	- O pisaniu UT
+	- TestClass
+	- TestMethod
+	- TestInitialize
+	- Przyklady
+8) LINQ
+	- Przyklady
+9) async/await
+	- Roznica miedzy async a thread
+	- przyklad
