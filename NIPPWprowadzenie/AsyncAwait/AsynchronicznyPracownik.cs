@@ -26,12 +26,12 @@ namespace AsyncAwait
             this.nazwaPracownika = nazwaPracownika;
         }
 
-        public async Task PracujAsync(int czasPracy, int predkoscPracy)
+        public async Task PracujAsync(int liczbaJednostekPracy, int predkoscPracy)
         {
             // poniewaz chcemy w tasku zrobic await na metodzie delay, to caly task musi byc oznaczony jako async
             await Task.Run(async () =>
             {
-                for (int i = 0; i < czasPracy; i++)
+                for (int i = 0; i < liczbaJednostekPracy; i++)
                 {
                     Console.WriteLine($"{nazwaPracownika} pracuje...");
                     await Task.Delay(predkoscPracy);

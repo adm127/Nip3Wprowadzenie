@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Biblioteka
 {
-    public class Class1
+    public class PrzykladowaKlasa
     {
         int bardzoWaznaLiczba;
-        public Class1(int bardzoWaznaLiczba)
+        public PrzykladowaKlasa(int bardzoWaznaLiczba)
         {
             this.bardzoWaznaLiczba = bardzoWaznaLiczba;
         }

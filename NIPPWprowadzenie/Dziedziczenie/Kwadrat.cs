@@ -10,7 +10,7 @@ namespace Dziedziczenie
     {
         private double a;
         
-        public Kwadrat(double a):base(a, a, a, a)// Jako przykad tego ze "dziedziczenie" w prawdziwym swiecie nie musi oznaczyc logicznego "dziedziczenia" w kodowaniu
+        public Kwadrat(double a):base(a, a)// Jako przykad tego ze "dziedziczenie" w prawdziwym swiecie nie musi oznaczyc logicznego "dziedziczenia" w kodowaniu
         {
             this.a = a;
         }

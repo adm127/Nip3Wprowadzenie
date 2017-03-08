@@ -23,7 +23,7 @@ namespace UnitTesty
         public void Test_IfWiekszyNiz05()
         {
             // Arrange
-            Class1 testowyObiekt = new Class1(5);
+            PrzykladowaKlasa testowyObiekt = new PrzykladowaKlasa(5);
             string oczekiwanyWynik = "Testowana zmienna byla wieksza niz 0.5";
             // Act
             string wynik = testowyObiekt.PrzykladIf(2);
@@ -36,7 +36,7 @@ namespace UnitTesty
         public void Test_IfMniejszyNiz05()
         {
             // Arrange
-            Class1 testowyObiekt = new Class1(0);
+            PrzykladowaKlasa testowyObiekt = new PrzykladowaKlasa(0);
             string oczekiwanyWynik = "Testowana zmienna byla mniejsza niz 0.5";
             // Act
             string wynik = testowyObiekt.PrzykladIf(0);

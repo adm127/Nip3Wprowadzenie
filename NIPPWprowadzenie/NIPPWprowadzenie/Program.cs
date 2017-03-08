@@ -16,34 +16,44 @@ namespace NIPPWprowadzenie
         static void Main(string[] args)
         {
             // #1 Potrzebne jest dodanie referencji do 'biblioteki'
-            //Class1 pierwszyObiekt = new Class1(5);
+            //PrzykladowaKlasa pierwszyObiekt = new PrzykladowaKlasa(5);
+            //string wynik = pierwszyObiekt.PrzykladIf(3);
+
+            //string wynik = pierwszyObiekt.PrzykladFor(33);
+
             //string wynik = pierwszyObiekt.ToString();
             //Console.WriteLine(wynik);
 
             // przyklady kolekcji
-            //var kolekcje = new PrzykladyKolekcji();
+            var kolekcje = new PrzykladyKolekcji();
             //kolekcje.PrzykladUzyciaListy();
-            //kolekcje.PrzykladUzyciaTablicy();
+            kolekcje.PrzykladUzyciaTablicy();
             //kolekcje.PrzykladUzyciaSlownika();
 
             // #2 przyklad polimorfizmu
             //IList<Postac> postacie = new List<Postac>()
             //{
-            //    new Wojownik(),
-            //    new Mag(),
-            //    new Mag(),
-            //    new Lucznik(),
-            //    new Wojownik()
+            //    new Stan(),
+            //    new Cartman(),
+            //    new Cartman(),
+            //    new Kenny(),
+            //    new Stan()
             //};
             //NarysujPostacie(postacie);
 
             // #3 przyklad async/await
             //MainAsync().Wait();
 
+            // pod debugiem
             //var lambdaZmienna = new LambdaKlasa();
-            //Func<int, bool> test = (a) => { return a > 10; };
-            //var wynik = lambdaZmienna.Odfiltruj((a) => { return a > 10; });
+            //Func<int, bool> mojWarunek = (a) => { return a > 10; };
+            //var wynik = lambdaZmienna.Odfiltruj(mojWarunek);
+            ////var wynik = lambdaZmienna.Odfiltruj((a) => { return a > 10; });
             //lambdaZmienna.CzyWiekszyOdStu(() => 10);
+
+            // pod debugiem
+            //var wynik = TestLinq.PrzykladAsParallel();
+            //var zamowienia = TestLinq.ZamowieniaKlienta(1);
 
             Console.ReadLine();
         }

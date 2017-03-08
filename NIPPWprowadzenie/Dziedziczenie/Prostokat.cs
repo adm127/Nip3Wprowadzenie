@@ -8,14 +8,12 @@ namespace Dziedziczenie
 {
     public class Prostokat: Figura
     {
-        double a, b, c, d;
+        double a, b;
 
-        public Prostokat(double a, double b, double c, double d)
+        public Prostokat(double a, double b)
         {
             this.a = a;
             this.b = b;
-            this.c = c;
-            this.d = d;
         }
 
         public override double ObliczPole()
@@ -25,7 +23,7 @@ namespace Dziedziczenie
 
         public override double ObliczObwod()
         {
-            return a + b + c + d;
+            return a + a + b + b;
         }
     }
 }

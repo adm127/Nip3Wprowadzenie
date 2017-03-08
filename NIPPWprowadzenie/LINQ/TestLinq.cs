@@ -30,16 +30,18 @@ namespace LINQ
                    select o;
         }
 
-        static public void PrzykladAsParallel()
+        static public int[] PrzykladAsParallel()
         {
             int[] dane = Enumerable.Range(1, 10000000).ToArray();
 
             int[] wyniki = null;
-            wyniki = (from num in dane.AsParallel() // Mozna usunac AsParallel() 
+            wyniki = (from num in dane.AsParallel() // Mozna usunac AsParallel()
                       where num % 3 == 0
                       orderby num descending
                       select num).ToArray();
-            
+
+            return wyniki;
+
             // Wyniki na mojej maszynie:
             // Z uzyciem .AsParallel – 989 ms
             // Bez .AsParallel – 1415 ms

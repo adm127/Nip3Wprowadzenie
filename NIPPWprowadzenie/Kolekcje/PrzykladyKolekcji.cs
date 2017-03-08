@@ -102,6 +102,10 @@ namespace Kolekcje
                 "Piec"
             };
 
+            // mozemy sprawdzic wielkosc tablicy w konkretnym wymiarze (ale zdanie!)
+            Console.WriteLine("Gorny wymiar granicy" + tablicaNapisow.GetUpperBound(0));
+            Console.WriteLine("Dolny wymiar granicy" + tablicaNapisow.GetLowerBound(0));
+
             // mozemy sie odwolywac do n-tego elementu kolekcji
             Console.WriteLine($"Trzeci element tablicy to: {tablicaNapisow[2]}");
         }
