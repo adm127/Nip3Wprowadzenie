@@ -25,9 +25,9 @@ namespace NIPPWprowadzenie
             //Console.WriteLine(wynik);
 
             // przyklady kolekcji
-            var kolekcje = new PrzykladyKolekcji();
+            //var kolekcje = new PrzykladyKolekcji();
             //kolekcje.PrzykladUzyciaListy();
-            kolekcje.PrzykladUzyciaTablicy();
+            //kolekcje.PrzykladUzyciaTablicy();
             //kolekcje.PrzykladUzyciaSlownika();
 
             // #2 przyklad polimorfizmu

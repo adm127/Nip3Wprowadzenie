@@ -9,22 +9,14 @@ namespace NipGeneratorMap
 {
     public class KonwerterWysokosciNaZnak: IKonwerterWysokosciNaZnak
     {
-        IOgranicznikWysokosci _ogranicznik;
-        
-
-        public KonwerterWysokosciNaZnak(IOgranicznikWysokosci ogranicznik)
-        {
-            _ogranicznik = ogranicznik;
-        }
-
         public char WysokoscNaZnak(int wartoscWysokosci)
         {
-            if(!_ogranicznik.CzyPoprawnaWysokosc(wartoscWysokosci))
+            if (Wysokosci.ZnakiWysokosci.GetLowerBound(0) <= wartoscWysokosci && Wysokosci.ZnakiWysokosci.GetUpperBound(0) >= wartoscWysokosci)
             {
-                return '█';
+                return Wysokosci.ZnakiWysokosci[wartoscWysokosci]; 
             }
 
-            return Wysokosci.ZnakiWysokosci[wartoscWysokosci];
+            return '█';
         }
     }
 }

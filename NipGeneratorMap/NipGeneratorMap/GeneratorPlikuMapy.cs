@@ -20,7 +20,6 @@ namespace NipGeneratorMap
 
             using (var sw = new StreamWriter(_sciezkaPlikuWynikowego))
             {
-
                 for (int i = 0; i < wysokosci.Length; i++)
                 {
                     for (int j = 0; j < wysokosci[i].Length; j++)
