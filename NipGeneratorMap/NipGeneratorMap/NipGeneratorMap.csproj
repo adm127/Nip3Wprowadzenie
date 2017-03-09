@@ -43,18 +43,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GeneratorKonsolowyMapy.cs" />
-    <Compile Include="GeneratorPlikuMapy.cs" />
     <Compile Include="Interfaces\IDostarczycielWysokosci.cs" />
     <Compile Include="Interfaces\IGeneratorMapy.cs" />
     <Compile Include="Interfaces\IKonwerterWysokosciNaZnak.cs" />
     <Compile Include="Interfaces\IKonwerterZnakuNaWysokosc.cs" />
     <Compile Include="KonwerterZnakuNaWysokoscAcme.cs" />
     <Compile Include="KonwerterZnakuNaWysokoscMapex.cs" />
-    <Compile Include="PlikowyDostarczycielWysokosciAcme.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="KonwerterWysokosciNaZnak.cs" />
     <Compile Include="Wysokosci.cs" />
   </ItemGroup>
   <ItemGroup>
