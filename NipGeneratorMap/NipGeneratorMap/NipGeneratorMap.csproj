@@ -47,8 +47,6 @@
     <Compile Include="Interfaces\IGeneratorMapy.cs" />
     <Compile Include="Interfaces\IKonwerterWysokosciNaZnak.cs" />
     <Compile Include="Interfaces\IKonwerterZnakuNaWysokosc.cs" />
-    <Compile Include="KonwerterZnakuNaWysokoscAcme.cs" />
-    <Compile Include="KonwerterZnakuNaWysokoscMapex.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Wysokosci.cs" />

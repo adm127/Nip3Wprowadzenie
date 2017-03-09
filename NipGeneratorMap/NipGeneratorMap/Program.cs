@@ -38,29 +38,28 @@ namespace NipGeneratorMap
 
             Uzupelnij istniejace klasy, aby odczytywaly pliki map Acme i Mapex zgodnie z instrukcja:
 
-            - uzupelnij klasy, majace konwertowac znaki z plikow obu firm i zwracac wysokosc (liczbe od 0 - 12)
-                - KonwerterZnakuNaWysokoscAcme
-                - KonwerterZnakuNaWysokoscMapex
+            - stworz dwie klasy, majace konwertowac znaki z plikow obu firm i zwracac wysokosc (liczbe od 0 - 12). 
+                Klasy maja implementowac IKonwerterZnakuNaWysokosc. Nazawy np. KonwerterZnakuNaWysokoscAcme, KonwerterZnakuNaWysokoscMapex
             - stworz klase, ktora bedzie dostarczala wiadomosci z pliku (np. PlikowyDostarczycielWysokosci), ta klasa implementowac IDostarczycielWysokosci,
                 w konstruktorze ma przyjmowac sciezke do pliku (string) oraz ma byc niezalezna od konkretnej firmy (musi przyjmowac konwerter - rowniez w konstruktorze).
                 Klasa ma czytac podany plik i zwracac int[][] wartosci wysokosci (patrz IDostarczycielWysokosci)
             - stworz klase konwertujaca wysokosc (int) na znak z tablicy Wysokosci.ZnakiWysokosci (ma implementowac IKonwerterWysokosciNaZnak).
                 Klasa ma sprawdzac, czy podana wysokosc (int) miesci sie w zakresie tablicy, jesli nie, to ma zwracac znak Wysokosci.ZnakNieokreslonejWysokosci.
-            - stworz dwa klasy, ktore beda generowaly mape, jedna bedzie ja wyswietlac na konsoli, druga bedzie tworzyla plik z narysowana mapa. Obie klasy
+            - stworz dwie klasy, ktore beda generowaly mape, jedna bedzie ja wyswietlac na konsoli, druga bedzie tworzyla plik z narysowana mapa. Obie klasy
                 maja implementowac IGeneratorMapy. Obie klasy w konstruktorze przyjmowac powinny IKonwerterWysokosciNaZnak. Dodatkowo klasa, ktora tworzy plik
                 z narysowana mapa, powinna w konstruktorze przyjmowac sciezke do pliku wynikowego.
             */
 
         static void Main(string[] args)
         {
-            var konwerter = new KonwerterWysokosciNaZnak();
+            //var konwerter = new KonwerterWysokosciNaZnak();
 
-            var generator = new GeneratorKonsolowyMapy(konwerter);
+            //var generator = new GeneratorKonsolowyMapy(konwerter);
 
-            var konwerterAcme = new KonwerterZnakuNaWysokoscAcme();
-            var dostarczycielWysokosciAcme = new PlikowyDostarczycielWysokosci(@"MapyAcme\Mapa2.txt", konwerterAcme);
+            //var konwerterAcme = new KonwerterZnakuNaWysokoscAcme();
+            //var dostarczycielWysokosciAcme = new PlikowyDostarczycielWysokosci(@"MapyAcme\Mapa2.txt", konwerterAcme);
 
-            generator.GenerujMape(dostarczycielWysokosciAcme);
+            //generator.GenerujMape(dostarczycielWysokosciAcme);
         }       
     }
 }
