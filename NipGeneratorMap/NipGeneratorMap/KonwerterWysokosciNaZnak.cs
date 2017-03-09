@@ -16,7 +16,7 @@ namespace NipGeneratorMap
                 return Wysokosci.ZnakiWysokosci[wartoscWysokosci]; 
             }
 
-            return '█';
+            return Wysokosci.ZnakNieokreslonejWysokosci;
         }
     }
 }

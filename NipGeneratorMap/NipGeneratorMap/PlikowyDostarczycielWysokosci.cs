@@ -12,12 +12,12 @@ namespace NipGeneratorMap
     /// Klasa czytajaca pliki mapy firmy Acme
     /// (Znaki: 0 1 2 3 4 5 6 7 8 9 a b c)
     /// </summary>
-    public class PlikowyDostarczycielWysokosciAcme : IDostarczycielWysokosci
+    public class PlikowyDostarczycielWysokosci : IDostarczycielWysokosci
     {
         private string _sciezkaPlikuWejsciowego;
         private IKonwerterZnakuNaWysokosc _konwerter;
 
-        public PlikowyDostarczycielWysokosciAcme(string sciezkaPlikuWejsciowego, IKonwerterZnakuNaWysokosc konwerter)
+        public PlikowyDostarczycielWysokosci(string sciezkaPlikuWejsciowego, IKonwerterZnakuNaWysokosc konwerter)
         {
             _sciezkaPlikuWejsciowego = sciezkaPlikuWejsciowego;
             _konwerter = konwerter;

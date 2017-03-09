@@ -46,7 +46,7 @@ namespace NipGeneratorMap
             var generator = new GeneratorKonsolowyMapy(konwerter);
 
             var konwerterAcme = new KonwerterZnakuNaWysokoscAcme();
-            var dostarczycielWysokosci = new PlikowyDostarczycielWysokosciAcme(@"MapyAcme\Mapa2.txt", konwerterAcme);
+            var dostarczycielWysokosci = new PlikowyDostarczycielWysokosci(@"MapyAcme\Mapa2.txt", konwerterAcme);
 
             generator.GenerujMape(dostarczycielWysokosci);
         }       

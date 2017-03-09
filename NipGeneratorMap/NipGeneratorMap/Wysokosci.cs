@@ -9,5 +9,7 @@ namespace NipGeneratorMap
     public static class Wysokosci
     {
         public static readonly char[] ZnakiWysokosci = { ' ', '`', '.', ':', '/', '+', 'o', 's', 'y', 'd', 'm', 'N', 'M' };
+
+        public static readonly char ZnakNieokreslonejWysokosci = '█';
     }
 }
