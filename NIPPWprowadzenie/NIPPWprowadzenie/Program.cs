@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using Kolekcje;
 using Dziedziczenie;
 using AsyncAwait;
+using DependencyInjection;
 
 namespace NIPPWprowadzenie
 {
@@ -45,15 +46,18 @@ namespace NIPPWprowadzenie
             //MainAsync().Wait();
 
             // pod debugiem
-            var lambdaZmienna = new LambdaKlasa();
-            Func<int, bool> mojWarunek = (a) => { return a > 10; };
-            var wynik = lambdaZmienna.Odfiltruj(mojWarunek);
+            //var lambdaZmienna = new LambdaKlasa();
+            //Func<int, bool> mojWarunek = (a) => { return a > 10; };
+            //var wynik = lambdaZmienna.Odfiltruj(mojWarunek);
             ////var wynik = lambdaZmienna.Odfiltruj((a) => { return a > 10; });
             //lambdaZmienna.CzyWiekszyOdStu(() => 10);
 
             // pod debugiem
             //var wynik = TestLinq.PrzykladAsParallel();
             //var zamowienia = TestLinq.ZamowieniaKlienta(1);
+
+            //var di = new DependencyInjectionPrzyklad();
+            //di.Wykonaj();
 
             Console.ReadLine();
         }
