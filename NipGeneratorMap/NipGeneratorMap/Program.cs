@@ -54,7 +54,7 @@ namespace NipGeneratorMap
 					            - ZnakKoncaLinii i wywolywac ja przed sw.WriteLine() w GeneratorPlikuMapy
 					            - ZnakPoczatkuLinii i wywolywac ja przed rozpoczeciem nowej linii w GeneratorPlikuMapy
 		
-	                - program wciaz powinien dzialac, 
+	                - program wciaz powinien dzialac
 	                - zmodyfikuj DI container aby uzywal nowo napisanej klasy	
 	                - program wciaz powinien dzialac, ale wynik tabeli HTMLowej na konsoli nie bedzie zbyt czytelny :-)
 	                - zomydyfikuj DI container aby uzywal klasy generujacej plik a nie wyswietlajacej wszystko na konsole
