@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Practices.Unity;
+using NipGeneratorMap.Interfaces;
 
 namespace NipGeneratorMap
 {
@@ -40,15 +42,14 @@ namespace NipGeneratorMap
             */
 
         static void Main(string[] args)
-        {
+        {            
             var konwerter = new KonwerterWysokosciNaZnak();
-
-            var generator = new GeneratorKonsolowyMapy(konwerter);
-
             var konwerterAcme = new KonwerterZnakuNaWysokoscAcme();
-            var dostarczycielWysokosci = new PlikowyDostarczycielWysokosci(@"MapyAcme\Mapa2.txt", konwerterAcme);
+            var dostarczycielWysokosci = new PlikowyDostarczycielWysokosci(konwerterAcme);
 
-            generator.GenerujMape(dostarczycielWysokosci);
+            var generator = new GeneratorKonsolowyMapy(konwerter, dostarczycielWysokosci);
+
+            generator.GenerujMape(@"MapyAcme\Mapa2.txt");
         }       
     }
 }

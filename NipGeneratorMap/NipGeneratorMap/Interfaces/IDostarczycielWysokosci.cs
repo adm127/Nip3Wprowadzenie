@@ -8,6 +8,6 @@ namespace NipGeneratorMap.Interfaces
 {
     public interface IDostarczycielWysokosci
     {
-        int[][] Wysokosci();
+        int[][] Wysokosci(string sciezkaPlikuWejsciowego);
     }
 }

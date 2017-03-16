@@ -9,7 +9,7 @@ namespace NipGeneratorMap
 {
     public class KonwerterWysokosciNaZnak: IKonwerterWysokosciNaZnak
     {
-        public char WysokoscNaZnak(int wartoscWysokosci)
+        public string WysokoscNaZnak(int wartoscWysokosci)
         {
             if (Wysokosci.ZnakiWysokosci.GetLowerBound(0) <= wartoscWysokosci && Wysokosci.ZnakiWysokosci.GetUpperBound(0) >= wartoscWysokosci)
             {

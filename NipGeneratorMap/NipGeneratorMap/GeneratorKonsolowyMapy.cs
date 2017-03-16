@@ -10,15 +10,17 @@ namespace NipGeneratorMap
     public class GeneratorKonsolowyMapy : IGeneratorMapy
     {
         private IKonwerterWysokosciNaZnak _konwerter;
+        private IDostarczycielWysokosci _dostarczyciel;
 
-        public GeneratorKonsolowyMapy(IKonwerterWysokosciNaZnak konwerter)
+        public GeneratorKonsolowyMapy(IKonwerterWysokosciNaZnak konwerter, IDostarczycielWysokosci dostarczyciel)
         {
             _konwerter = konwerter;
+            _dostarczyciel = dostarczyciel;
         }
 
-        public void GenerujMape(IDostarczycielWysokosci dostarczyciel)
+        public void GenerujMape(string sciezkaPlikuWejsciowego)
         {
-            var wysokosci = dostarczyciel.Wysokosci();
+            var wysokosci = _dostarczyciel.Wysokosci(sciezkaPlikuWejsciowego);
 
             for (int i = 0; i < wysokosci.Length; i++)
             {

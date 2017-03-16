@@ -14,18 +14,16 @@ namespace NipGeneratorMap
     /// </summary>
     public class PlikowyDostarczycielWysokosci : IDostarczycielWysokosci
     {
-        private string _sciezkaPlikuWejsciowego;
         private IKonwerterZnakuNaWysokosc _konwerter;
 
-        public PlikowyDostarczycielWysokosci(string sciezkaPlikuWejsciowego, IKonwerterZnakuNaWysokosc konwerter)
+        public PlikowyDostarczycielWysokosci(IKonwerterZnakuNaWysokosc konwerter)
         {
-            _sciezkaPlikuWejsciowego = sciezkaPlikuWejsciowego;
             _konwerter = konwerter;
         }
 
-        public int[][] Wysokosci()
+        public int[][] Wysokosci(string sciezkaPlikuWejsciowego)
         {
-            using (var streamReader = new StreamReader(_sciezkaPlikuWejsciowego))
+            using (var streamReader = new StreamReader(sciezkaPlikuWejsciowego))
             {
                 var dlugoscMapy = int.Parse(streamReader.ReadLine());
                 var wysokoscMapy = int.Parse(streamReader.ReadLine());
