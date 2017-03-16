@@ -20,14 +20,16 @@ namespace NipGeneratorMap
         {
             var wysokosci = _dostarczyciel.Wysokosci(sciezkaPlikuWejsciowego);
 
-            using (var sw = new StreamWriter(_sciezkaPlikuWynikowego))
+            using (var sw = new StreamWriter(_sciezkaPlikuWynikowego, true))
             {
                 for (int i = 0; i < wysokosci.Length; i++)
                 {
+                    sw.Write(_konwerter.ZnakPoczatkuLinii());
                     for (int j = 0; j < wysokosci[i].Length; j++)
                     {
                         sw.Write(_konwerter.WysokoscNaZnak(wysokosci[i][j]));
                     }
+                    sw.Write(_konwerter.ZnakKoncaLinii());
                     sw.WriteLine();
                 }
             }

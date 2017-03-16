@@ -42,14 +42,32 @@ namespace NipGeneratorMap
             */
 
         static void Main(string[] args)
-        {            
-            var konwerter = new KonwerterWysokosciNaZnak();
-            var konwerterAcme = new KonwerterZnakuNaWysokoscAcme();
-            var dostarczycielWysokosci = new PlikowyDostarczycielWysokosci(konwerterAcme);
+        {
+            // https://msdn.microsoft.com/en-us/library/dn178463(v=pandp.30).aspx
+            var container = new UnityContainer();
 
-            var generator = new GeneratorKonsolowyMapy(konwerter, dostarczycielWysokosci);
+            RegisterTypes(container);
+
+            var generator = container.Resolve<IGeneratorMapy>("html");
 
             generator.GenerujMape(@"MapyAcme\Mapa2.txt");
-        }       
+        }
+
+        private static void RegisterTypes(UnityContainer container)
+        {
+            container.RegisterType<IKonwerterWysokosciNaZnak, KonwerterWysokosciNaZnak>();
+            container.RegisterType<IKonwerterZnakuNaWysokosc, KonwerterZnakuNaWysokoscAcme>();
+            container.RegisterType<IDostarczycielWysokosci, PlikowyDostarczycielWysokosci>();
+            container.RegisterType<IDostarczycielZnakow, DostarczycielZnakowHtml>();
+            container.RegisterType<IGeneratorMapy, GeneratorPlikuMapy>(
+                new InjectionConstructor(@"MapyAcme\mapa.html", container.Resolve<IKonwerterWysokosciNaZnak>(), container.Resolve<IDostarczycielWysokosci>())
+                );
+
+            container.RegisterType<IGeneratorMapy, GeneratorMapyHtmlDekorator>("html",
+                new InjectionConstructor(@"MapyAcme\mapa.html", container.Resolve<IGeneratorMapy>())
+                );
+
+                
+        }
     }
 }

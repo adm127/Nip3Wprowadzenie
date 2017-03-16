@@ -6,11 +6,14 @@ using System.Threading.Tasks;
 
 namespace NipGeneratorMap.Interfaces
 {
-    public interface IKonwerterWysokosciNaZnak
+    public interface IDostarczycielZnakow
     {
-        string WysokoscNaZnak(int wartoscWysokosci);
+        string[] ZnakiWysokosci();
+
+        string ZnakNieokreslonejWysokosci();
 
         string ZnakKoncaLinii();
+
         string ZnakPoczatkuLinii();
     }
 }

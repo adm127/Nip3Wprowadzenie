@@ -9,14 +9,31 @@ namespace NipGeneratorMap
 {
     public class KonwerterWysokosciNaZnak: IKonwerterWysokosciNaZnak
     {
+        private IDostarczycielZnakow _dostarczycielZnakow;
+
+        public KonwerterWysokosciNaZnak(IDostarczycielZnakow dostarczycielZnakow)
+        {
+            _dostarczycielZnakow = dostarczycielZnakow;
+        }
+
         public string WysokoscNaZnak(int wartoscWysokosci)
         {
-            if (Wysokosci.ZnakiWysokosci.GetLowerBound(0) <= wartoscWysokosci && Wysokosci.ZnakiWysokosci.GetUpperBound(0) >= wartoscWysokosci)
+            if (_dostarczycielZnakow.ZnakiWysokosci().GetLowerBound(0) <= wartoscWysokosci && _dostarczycielZnakow.ZnakiWysokosci().GetUpperBound(0) >= wartoscWysokosci)
             {
-                return Wysokosci.ZnakiWysokosci[wartoscWysokosci]; 
+                return _dostarczycielZnakow.ZnakiWysokosci()[wartoscWysokosci]; 
             }
 
-            return Wysokosci.ZnakNieokreslonejWysokosci;
+            return _dostarczycielZnakow.ZnakNieokreslonejWysokosci();
+        }
+
+        public string ZnakKoncaLinii()
+        {
+            return _dostarczycielZnakow.ZnakKoncaLinii();
+        }
+
+        public string ZnakPoczatkuLinii()
+        {
+            return _dostarczycielZnakow.ZnakPoczatkuLinii();
         }
     }
 }
