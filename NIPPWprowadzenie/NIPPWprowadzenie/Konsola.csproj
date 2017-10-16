@@ -70,6 +70,18 @@
       <Project>{18e25637-1cd7-4740-bc0c-8bfbeeb0e509}</Project>
       <Name>LINQ</Name>
     </ProjectReference>
+    <ProjectReference Include="..\UnitTesty\UnitTesty.csproj">
+      <Project>{0c946e77-3af0-4de9-bdb6-1a3924140df3}</Project>
+      <Name>UnitTesty</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Wyjatki\Wyjatki.csproj">
+      <Project>{e11acbec-4b56-417d-8541-31d7aec104c4}</Project>
+      <Name>Wyjatki</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Zdarzenia\Zdarzenia.csproj">
+      <Project>{0af9f4de-5e26-4261-a03d-97aa7a0fe9d5}</Project>
+      <Name>Zdarzenia</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

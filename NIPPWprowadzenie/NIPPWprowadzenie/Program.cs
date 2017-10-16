@@ -45,15 +45,35 @@ namespace NIPPWprowadzenie
             //MainAsync().Wait();
 
             // pod debugiem
-            var lambdaZmienna = new LambdaKlasa();
-            Func<int, bool> mojWarunek = (a) => { return a > 10; };
-            var wynik = lambdaZmienna.Odfiltruj(mojWarunek);
-            ////var wynik = lambdaZmienna.Odfiltruj((a) => { return a > 10; });
+            //var lambdaZmienna = new LambdaKlasa();
+            //Func<int, bool> mojWarunek = WarunekWiekszyOd10;    //(a) => { return a > 10; };
+            //var wynik = lambdaZmienna.Odfiltruj(mojWarunek);
+            //var wynik = lambdaZmienna.Odfiltruj((a) => { return a > 10; });
             //lambdaZmienna.CzyWiekszyOdStu(() => 10);
 
             // pod debugiem
-            //var wynik = TestLinq.PrzykladAsParallel();
-            //var zamowienia = TestLinq.ZamowieniaKlienta(1);
+            var wynik = TestLinq.PrzykladAsParallel();
+            var zamowienia = TestLinq.ZamowieniaKlienta(1);
+            TestLinq.LinqJoin();
+            TestLinq.LinqGroup();
+
+
+            //wyjatki
+            //var w = new Wyjatki();
+
+            //try
+            //{
+            //  w.Uruchom();
+            //}
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine("\n\nZlapano wyjatek W Main!\n\n");
+            //    Console.WriteLine(ex.ToString());
+            //}
+
+            //Zdarzenia z = new Zdarzenia();
+            //TODO: dodaj Event Handlery
+            //z.UruchomObliczenia();
 
             Console.ReadLine();
         }
@@ -84,6 +104,11 @@ namespace NIPPWprowadzenie
             var zadanie2 = pracownik2.PracujAsync(25, 750);
 
             await Task.WhenAll(zadanie1, zadanie2);
+        }
+
+        static bool WarunekWiekszyOd10(int i)
+        {
+            return i > 10;
         }
     }
 }

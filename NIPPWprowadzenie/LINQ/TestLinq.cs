@@ -46,6 +46,31 @@ namespace LINQ
             // Z uzyciem .AsParallel – 989 ms
             // Bez .AsParallel – 1415 ms
         }
+
+        static public void LinqJoin()
+        {
+            var join = (from z in zamowienia
+                   join k in klienci
+                    on z.IDKlienta equals k.ID
+                   select new { Nazwisko = k.Nazwisko, Wartosc = z.Wartosc}).ToList();
+
+            foreach (var d in join)
+            {
+                Console.WriteLine($"{d.Nazwisko}: {d.Wartosc}");
+            }
+        }
+
+        static public void LinqGroup()
+        {
+            var group = (from z in zamowienia
+                        group z by z.IDKlienta into zg
+                        select new {IDKlienta = zg.Key , Wartosc = zg.Sum(z => z.Wartosc), IDlist = zg.ToList() }).ToList();
+
+            foreach (var d in group)
+            {
+                Console.WriteLine($"{d.IDKlienta}: {d.Wartosc}");
+            }
+        }
     }
 
     public class Zamowienie
